@@ -11,7 +11,7 @@ button {
     font-size: x-large;
 }
 #elsohatter {
-    background-color: blue;
+    background-color: bisque;
     border-radius: 5px;
     
 }
@@ -28,4 +28,7 @@ button {
     text-align: center;
     margin: 10%;
     padding: 20%;
+}
+p {
+    text-align: center;
 }
