@@ -2,7 +2,7 @@ body {
     background-color: bisque;
 }
 header {
-    background-color: blue;
+    background-color: red;
 }
 button {
     border-radius: 10px;
@@ -15,6 +15,17 @@ button {
     border-radius: 5px;
     
 }
-#elsobekezd {
-    
+.container {
+    background-color: grey;
+    display: grid;
+    grid-template-areas: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%;
+    justify-content: space-evenly;
+}
+.container div {
+    background-color: blue;
+    text-align: center;
+    margin: 10%;
+    padding: 20%;
 }
