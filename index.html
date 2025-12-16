@@ -1,33 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <button>Rendelés</button>
-        <button>Menü</button>
-        <button><a href="csapatunk.html">Csapatunk</a></button>
-    </header>
-    <div id="elsohatter">
-        <div id="elsobekezd">
-            <p>Akár reggelizni, ebédelni vagy vacsorázni szeretnél <br>
-                 a Mosolygós Büfében sokféle harapnivalót találsz a péksüteményektől a szendvicseken át a rántott finomságokig. <br>
-                Fogyaszd el kávéd, süteményedet a hangulatos teraszunkon.
-            </p>
-        </div>
-        <div class="container">
-            <div class="kep1">KÉP</div>
-            <div class="kep2">KÉP</div>
-            <div class="kep3">KÉP</div>
-            <div class="kep4">KÉP</div>
-            <div class="kep5">KÉP</div>
-            <div class="kep6">KÉP</div>
-        </div>
-        <a href="tel:06303214233">Hívj</a>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="bshazi.css">
+  </head>
+  <body>
+<!-- menu -->
+<nav class="navbar navbar-expand bg-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Főoldal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Rólunk</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Szolgáltatások</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Kapcsolat</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- slide show -->
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/man-chef-cooking-asian-chicken-cafe-kitchen.jpg" class="d-block w-100" alt="...">
     </div>
-</body>
+    <div class="carousel-item">
+      <img src="img/precision-originality-shine-as-expert-adds-cut-vegetables-meal.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/view-chef-working-kitchen.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- bemutatkozo kepek -->
+<div class="container my-4">
+  <div class="row align-items-center text-center">
+
+    <div class="col-md-4">
+      <img src="img/Szervírozás.jpeg" class="img-fluid rounded float-start" alt="Bal kép">
+    </div>
+
+    <div class="col-md-4">
+      <h5>Üdvözlünk!</h5>
+      <p>
+        Friss alapanyagokból, nagy odafigyeléssel készítjük ételeinket.
+        Célunk, hogy gyorsan és minőségi fogásokat vigyünk az asztalodra.
+      </p>
+    </div>
+
+    <div class="col-md-4">
+      <img src="img/Szervírozás.jpeg" class="img-fluid rounded float-end" alt="Jobb kép">
+    </div>
+    
+
+  </div>
+  <!-- ettermek -->
+  <div class="container my-5">
+
+  <h2 class="text-center mb-5">Éttermeink</h2>
+
+  <div class="row align-items-center mb-4">
+    <div class="col-md-8">
+      <h5>Belvárosi Étterem</h5>
+      <p>
+        1052 Budapest, Duna utca 12.<br>
+        Modern környezet, gyors kiszolgálás és friss, napi menü várja
+        vendégeinket a város szívében.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <img src="img/etterem1.jpg" class="img-fluid rounded" alt="Belvárosi Étterem">
+    </div>
+  </div>
+
+  <div class="row align-items-center mb-4">
+    <div class="col-md-8">
+      <h5>Park Étterem</h5>
+      <p>
+        1118 Budapest, Zöldliget tér 5.<br>
+        Nyugodt, családbarát környezet zöldövezetben, ahol a klasszikus
+        ízek és az otthonos hangulat találkoznak.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <img src="img/etterem2.jpg" class="img-fluid rounded" alt="Park Étterem">
+    </div>
+  </div>
+
+</div>
+
+</div>
+<!-- kartya -->
+<div class="card order-card" style="width: 15rem; position: fixed; bottom: 20px; right: 20px;">
+  <div class="card-body">
+    <h5 class="card-title">Rendelés</h5>
+    <p class="card-text">
+      Rendeljen tőlünk finom ételeket gyorsan és egyszerűen! Kattintson a linkekre,
+      és élvezze ízletes fogásainkat otthonában.
+    </p>
+    <a href="bsurlaphazi.html" class="card-link">Rendelés</a>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
 </html>
