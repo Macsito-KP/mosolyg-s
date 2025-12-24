@@ -2,3 +2,9 @@
     height: 40vh;
     object-fit: cover;
 }
+.bemutatkozo_szoveg p  {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+}
