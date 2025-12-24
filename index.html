@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Mosolygós büfé</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="bshazi.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
 <!-- menu -->
@@ -13,16 +13,19 @@
   <div class="container-fluid">
     <ul class="navbar-nav mx-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Főoldal</a>
+        <a class="nav-link" href="index.html">Főoldal</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Rólunk</a>
+        <a class="nav-link" href="csapatunk.html">Rólunk</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Szolgáltatások</a>
+        <a class="nav-link" href="szolgáltatásaink.html">szolgáltatásaink</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Kapcsolat</a>
+        <a class="nav-link" href="kapcsolatok.html">Kapcsolatok</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="rendelés.html">Rendelés</a>
       </li>
     </ul>
   </div>
@@ -36,13 +39,13 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/man-chef-cooking-asian-chicken-cafe-kitchen.jpg" class="d-block w-100" alt="...">
+      <img src="img/kitolto.jpg" class="d-block w-100" alt="Kitolto kep">
     </div>
     <div class="carousel-item">
-      <img src="img/precision-originality-shine-as-expert-adds-cut-vegetables-meal.jpg" class="d-block w-100" alt="...">
+      <img src="img/kitolto.jpg" class="d-block w-100" alt="Kitolto kep">
     </div>
     <div class="carousel-item">
-      <img src="img/view-chef-working-kitchen.jpg" class="d-block w-100" alt="...">
+      <img src="img/kitolto.jpg" class="d-block w-100" alt="Kitolto kep">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -59,7 +62,7 @@
   <div class="row align-items-center text-center">
 
     <div class="col-md-4">
-      <img src="img/Szervírozás.jpeg" class="img-fluid rounded float-start" alt="Bal kép">
+      <img src="img/bufe belulrol .jpg" class="img-fluid rounded float-start" alt="Bal kép">
     </div>
 
     <div class="col-md-4">
@@ -71,7 +74,7 @@
     </div>
 
     <div class="col-md-4">
-      <img src="img/Szervírozás.jpeg" class="img-fluid rounded float-end" alt="Jobb kép">
+      <img src="img/bufe belulrol .jpg" class="img-fluid rounded float-end" alt="Jobb kép">
     </div>
     
 
@@ -79,50 +82,15 @@
   <!-- ettermek -->
   <div class="container my-5">
 
-  <h2 class="text-center mb-5">Éttermeink</h2>
+  <h2 class="text-center mb-5">Hol találsz?</h2>
 
   <div class="row align-items-center mb-4">
-    <div class="col-md-8">
-      <h5>Belvárosi Étterem</h5>
-      <p>
-        1052 Budapest, Duna utca 12.<br>
-        Modern környezet, gyors kiszolgálás és friss, napi menü várja
-        vendégeinket a város szívében.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <img src="img/etterem1.jpg" class="img-fluid rounded" alt="Belvárosi Étterem">
+    <div class="col-md-12">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.000438801861!2d19.03060167708368!3d47.50938267118123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc1c5172b2e5%3A0xa0235d37931fc65d!2zTW9zb2x5Z8OzcyBCw7xmw6k!5e0!3m2!1shu!2shu!4v1766585060593!5m2!1shu!2shu"
+  width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border-radius: 10%;"></iframe>
     </div>
   </div>
-
-  <div class="row align-items-center mb-4">
-    <div class="col-md-8">
-      <h5>Park Étterem</h5>
-      <p>
-        1118 Budapest, Zöldliget tér 5.<br>
-        Nyugodt, családbarát környezet zöldövezetben, ahol a klasszikus
-        ízek és az otthonos hangulat találkoznak.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <img src="img/etterem2.jpg" class="img-fluid rounded" alt="Park Étterem">
-    </div>
-  </div>
-
-</div>
-
-</div>
-<!-- kartya -->
-<div class="card order-card" style="width: 15rem; position: fixed; bottom: 20px; right: 20px;">
-  <div class="card-body">
-    <h5 class="card-title">Rendelés</h5>
-    <p class="card-text">
-      Rendeljen tőlünk finom ételeket gyorsan és egyszerűen! Kattintson a linkekre,
-      és élvezze ízletes fogásainkat otthonában.
-    </p>
-    <a href="bsurlaphazi.html" class="card-link">Rendelés</a>
-  </div>
-</div>
+ </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
