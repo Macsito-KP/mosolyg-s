@@ -8,3 +8,15 @@
     padding-right: 10%;
     padding-top: 5%;
 }
+
+.footer-adatok p {
+    display: inline;
+}
+.navbar-brand img {
+    width: 100px;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+ 
