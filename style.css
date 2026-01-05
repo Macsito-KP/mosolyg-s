@@ -153,7 +153,34 @@ grid-row-gap: 0px;
       text-align: center; /* vízszintesen középre */
       margin: 0 auto;     /* középre tolás, ha kell */
   }
-  
+
 }
-    
+@media screen and (max-width: 767px) {
+  .footer {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .div2 {
+    display: none; 
+  }
+  .div3 {
+    text-align: center; 
+    margin: 0 auto;
+  }
+  .parent {
+    grid-template-columns: 1fr 2fr; /* marad bal kép + szöveg, szöveg kitölti a jobb helyet */
+  }
+}
+
+@media screen and (max-width: 511px) {
+  .div1 {
+    display: none; 
+  }
+  .parent {
+    grid-template-columns: 3fr; /* marad bal kép + szöveg, szöveg kitölti a jobb helyet */
+  }
+}
     

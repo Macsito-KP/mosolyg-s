@@ -79,6 +79,26 @@
     Egyedi igények alapján vállaljuk ételek és italok biztosítását.
   </p>
 </div>
+  <script>
+        document.addEventListener(
+            "DOMContentLoaded", () => {
+                const menuToggle = document.getElementById("menu-toggle")
+                const navLinks = document.getElementById("nav_links")
+                const menuBezar = document.getElementById("menu-bezar");
+                menuToggle.addEventListener("click", () => {
+                    navLinks.classList.toggle("show");
+                    menuToggle.classList.toggle("hide");
+                    menuBezar.classList.toggle("show");
+                })
+                menuBezar.addEventListener("click", () => {
+                    navLinks.classList.remove("show");
+                    menuBezar.classList.remove("show");
+                    menuToggle.classList.remove("hide");
+                })
+
+            }
+        )
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
