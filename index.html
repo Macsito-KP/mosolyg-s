@@ -9,24 +9,26 @@
   </head>
   <body>
 <!-- menu -->
-<nav class="navbar navbar-expand bg-light">
-  <div class="container-fluid">
-    <ul class="navbar-nav mx-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Főoldal</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="csapatunk.html">Rólunk</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="szolgáltatásaink.html">Szolgáltatásaink</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="rendelés.html">Rendelés</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="menu-bezar" id="menu-bezar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+</svg>
+        </div>
+        <ul class="nav_links" id="nav_links">
+            <li><a class="nav-link" href="index.html">Főoldal</a></li>
+            <li><a class="nav-link" href="szolgáltatásaink.html">Szolgáltatásaink</a></li>
+            <li><a class="nav-link" href="csapatunk.html">Rólunk</a></li>
+            <li><a class="nav-link" href="rendelés.html">Rendelés</a></li>
+        </ul>
+    </nav>
 <!-- slide show -->
 <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
@@ -91,14 +93,44 @@
  <footer class="footer ">
     <div class="footer-dontainer">
       <div class="footer-adatok">
-        <p>📍 Cím: 1234 Budapest, Példa utca 5.</p>
-        <p>📞 Telefon: +36 30 123 4567</p>
-        <p>✉️ Email: info@pelda.hu</p>
-        
+      </p>
+      <p>
+        📍 Cím: 1234 Budapest, Példa utca 5.
+      </p>
+
+      <p>
+        📞 Telefon:
+        <a href="tel:+36301234567">+36 30 123 4567</a>
+      </p>
+
+      <p>
+        ✉️ Email:
+        <a href="mailto:info@pelda.hu">info@pelda.hu</a>
+      </p>
     </div>
 
     </div>
  </footer>
+  <script>
+        document.addEventListener(
+            "DOMContentLoaded", () => {
+                const menuToggle = document.getElementById("menu-toggle")
+                const navLinks = document.getElementById("nav_links")
+                const menuBezar = document.getElementById("menu-bezar");
+                menuToggle.addEventListener("click", () => {
+                    navLinks.classList.toggle("show");
+                    menuToggle.classList.toggle("hide");
+                    menuBezar.classList.toggle("show");
+                })
+                menuBezar.addEventListener("click", () => {
+                    navLinks.classList.remove("show");
+                    menuBezar.classList.remove("show");
+                    menuToggle.classList.remove("hide");
+                })
+
+            }
+        )
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
