@@ -29,6 +29,10 @@ body{
     align-items: flex-end;
 
 }
+.profil{
+  width: 10px;
+  height: 10px;
+}
 
 .bemutatkozo_kep {
   float: left;
