@@ -1,6 +1,43 @@
 body{
   background-color: whitesmoke;
 }
+.kartyak{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+.kartya {
+  display: flex;               /* vízszintes elrendezés: kép + szöveg */
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 50%;
+  margin: 5px;
+  padding: 10px;
+  align-items: flex-start;     /* a kép és szöveg teteje egy vonalban legyen */
+  gap: 20px;                   /* távolság a kép és a szöveg között */
+}
+
+.kartya img {
+  width: 150px;                /* a kép szélessége */
+  height: auto;                /* aránytartás */
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
+.kartya_szoveg {
+  display: flex;
+  flex-direction: column;      /* H3 fent, P alatta */
+  justify-content: flex-start;
+}
+
+.kartya_szoveg h3 {
+  margin: 0 0 10px 0;          /* távolság a cím és szöveg között */
+}
+
+.kartya_szoveg p {
+  margin: 0;
+}
 .carousel-item img {
     height: 40vh;
     object-fit: cover;
@@ -150,6 +187,7 @@ grid-row-gap: 0px;
         .menu-bezar.show {
             display: block;
         }
+
 
 @media screen and (max-width: 767px) {
   .col-md-4:first-child,
