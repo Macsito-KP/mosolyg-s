@@ -1,6 +1,7 @@
 <?php
 // SQL szerver company adatbázis users tábla
 // ID , name , nickname , pwd_sec , last_login , office
+header('Content-Type: text/html; charset=utf-8');
 
 $servername = "localhost";
 $username = "root";
@@ -231,7 +232,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
       color:var(--muted);
       text-decoration:none;
     }
-    .forgot a:hover{ text-decoration:underline; color:var(--accent) }
+    .forgot a:hover{ text-decoration:underline; color:#BF4646 }
 
     .actions{
       margin-top:18px;

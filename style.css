@@ -1,5 +1,33 @@
 body{
-  background-color: whitesmoke;
+  background-color: #EDDCC6;
+}
+.focim {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 60px 0 40px 0;
+}
+.kartya_szolg {
+  display: flex;
+  flex-direction: column;               /* h3 felül, p alatta */
+  flex: 0 0 calc(50% - 20px);           /* 2 oszlop */
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.263);
+}
+
+/* cím és szöveg távolság */
+.kartya_szolg h3 {
+  margin-bottom: 10px;
+}
+
+/* ===== 7. KÁRTYA KÖZÉPRE ===== */
+
+.kartya_szolg:nth-child(7) {
+  flex: 0 0 100%;
+  max-width: 50%;
+  margin: 0 auto;
 }
 .kartyak{
   display: flex;
@@ -7,19 +35,24 @@ body{
   gap: 10px;
   justify-content: flex-start;
 }
+
+.kartyak h2{
+  display: block;
+}
 .kartya {
-  display: flex;               /* vízszintes elrendezés: kép + szöveg */
+  display: flex;
+  flex: 0 0 calc(50% - 10px);   /* EZ váltja ki a width: 50%-ot */
+  box-sizing: border-box;      /* fontos */
   border: 1px solid black;
   border-radius: 15px;
-  width: 50%;
-  margin: 5px;
   padding: 10px;
-  align-items: flex-start;     /* a kép és szöveg teteje egy vonalban legyen */
-  gap: 20px;                   /* távolság a kép és a szöveg között */
+  align-items: flex-start;
+  gap: 20px;
 }
 
+
 .kartya img {
-  width: 150px;                /* a kép szélessége */
+  width: 200px;                /* a kép szélessége */
   height: auto;                /* aránytartás */
   border-radius: 15px;
   border: 2px solid black;
@@ -51,7 +84,7 @@ body{
   left: 50%;              /* vízszintes közép */
   transform: translateX(-50%);
   width: 100%;            
-  background-color: #f8f9fa;
+  background-color: #c5b6a359;
   text-align: center;
   padding: 10px 0;
   border-top: 1px solid #ccc;
@@ -66,9 +99,19 @@ body{
     align-items: flex-end;
 
 }
-.profil{
-  width: 10px;
-  height: 10px;
+.profil {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin-right: 1.5rem;
+}
+
+
+.profil img {
+  width: 25px;
+  height: 25px;
+  pointer-events: auto; /* kell, hogy kattintható legyen */
+  z-index: 1000;   
 }
 
 .bemutatkozo_kep {
@@ -123,9 +166,9 @@ grid-row-gap: 0px;
             display: flex;
             justify-content: space-between;
             padding: 10px;
-            background-color: rgba(164, 164, 164, 0.149);
+            background-color: #c5b6a3;
             color: rgb(0, 0, 0);
-            /* border-bottom: 2px solid black; */
+            /* border-bottom: 2px solid black; rgba(164, 164, 164, 0.149) */
             /* margin-bottom: 3%; */
         }
         .nav_links {
@@ -226,6 +269,16 @@ grid-row-gap: 0px;
   }
   .parent {
     grid-template-columns: 3fr; /* marad bal kép + szöveg, szöveg kitölti a jobb helyet */
+  }
+}
+@media (max-width: 768px) {
+  .kartyak {
+    grid-template-columns: 1fr;
+  }
+
+  .kartya:nth-child(7) {
+    grid-column: auto;
+    max-width: 100%;
   }
 }
     
