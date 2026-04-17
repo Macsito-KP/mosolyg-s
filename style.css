@@ -1,5 +1,23 @@
+.btn-kosar {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+}
+.btn-kosar:hover { background-color: #218838; }
+.price { font-weight: bold; color: #28a745; font-size: 1.2rem; }
+.nav-link{
+  padding-top: 10px;
+}
 body{
   background-color: #EDDCC6;
+}
+.kosar{
+  top: 10px;
+  right: 10px;
 }
 .focim {
   text-align: center;
