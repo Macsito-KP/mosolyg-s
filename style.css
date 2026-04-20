@@ -1,302 +1,137 @@
-.btn-kosar {
-        background-color: #28a745;
-        color: white;
-        border: none;
-        padding: 8px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 10px;
+/* --- ALAP BEÁLLÍTÁSOK --- */
+body {
+  background-color: #EDDCC6 !important;
+  color: #333; /* Az általános szöveg maradhat sötét, de a kártyáké fehér lesz */
 }
-.btn-kosar:hover { background-color: #218838; }
-.price { font-weight: bold; color: #28a745; font-size: 1.2rem; }
-.nav-link{
-  padding-top: 10px;
-}
-body{
-  background-color: #EDDCC6;
-}
-.kosar{
-  top: 10px;
-  right: 10px;
-}
-.focim {
-  text-align: center;
-  font-size: 2.5rem;
-  margin: 60px 0 40px 0;
-}
-.kartya_szolg {
+
+/* --- FEJLÉC (NAVBAR) --- */
+.navbar {
   display: flex;
-  flex-direction: column;               /* h3 felül, p alatta */
-  flex: 0 0 calc(50% - 20px);           /* 2 oszlop */
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6) !important; /* Áttetsző fekete, mint a rendeles.php-n */
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav_links li a {
+  color: white !important; /* Fehér linkek a sötét háttéren */
+  text-decoration: none;
+  font-size: 18px;
+  transition: opacity 0.2s;
+}
+
+.nav_links li a:hover {
+  opacity: 0.7;
+}
+
+/* --- KÁRTYÁK STÍLUSA (Szolgáltatások és Ételek) --- */
+.kartya_szolg, .kartya {
+  display: flex;
   box-sizing: border-box;
-  border: 1px solid black;
+  border: none !important; /* Keret eltávolítva a modern hatásért */
   border-radius: 15px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.263);
+  background-color: rgba(0, 0, 0, 0.6) !important; /* Kért áttetsző fekete */
+  color: white !important; /* Fehér szöveg a kártyán */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
 }
 
-/* cím és szöveg távolság */
-.kartya_szolg h3 {
-  margin-bottom: 10px;
+.kartya_szolg:hover, .kartya:hover {
+  transform: translateY(-5px);
 }
 
-/* ===== 7. KÁRTYA KÖZÉPRE ===== */
+/* Kártya szövegek színe */
+.kartya_szoveg h3, .kartya_szolg h3 {
+  color: white !important;
+}
 
+.kartya_szoveg p, .kartya_szolg p {
+  color: #d4d4d4ff !important; /* Világosszürke leírás a jobb olvashatóságért */
+}
+
+/* --- ÁR ÉS GOMBOK --- */
+.price, .price-tag {
+  font-weight: bold;
+  color: #104200ff !important; /* A kért sötétzöld szín */
+  font-size: 1.25rem;
+}
+
+.btn-kosar, .btn-add-to-cart {
+  background-color: #104200ff !important; /* Sötétzöld gomb */
+  color: white !important;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: opacity 0.2s;
+}
+
+.btn-kosar:hover, .btn-add-to-cart:hover {
+  opacity: 0.8;
+}
+
+/* --- KÉPEK A KÁRTYÁKON --- */
+.kartya img {
+  width: 200px;
+  height: auto;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.1); /* Finomabb keret a képnek */
+}
+
+/* --- PROFIL IKON --- */
+.profil img {
+  width: 32px;
+  height: 32px;
+  filter: invert(1); /* Feketéből fehér ikon */
+  transition: opacity 0.2s;
+}
+
+/* --- FOOTER --- */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;            
+  background-color: rgba(0, 0, 0, 0.6); /* Illeszkedik a többi elemhez */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  z-index: 1000;
+}
+
+/* --- EGYÉB ELRENDEZÉS (Maradt az eredeti logika) --- */
+.kartya_szolg {
+  flex: 0 0 calc(50% - 20px);
+}
+
+.kartyak {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.kartya {
+  flex: 0 0 calc(50% - 15px);
+  gap: 20px;
+}
+
+/* 7. kártya középre igazítása */
 .kartya_szolg:nth-child(7) {
   flex: 0 0 100%;
   max-width: 50%;
   margin: 0 auto;
 }
-.kartyak{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-start;
-}
 
-.kartyak h2{
-  display: block;
+/* Bemutatkozó képek kerete */
+.bemutatkozo_kep, .bemutatkozo_kep2 {
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
-.kartya {
-  display: flex;
-  flex: 0 0 calc(50% - 10px);   /* EZ váltja ki a width: 50%-ot */
-  box-sizing: border-box;      /* fontos */
-  border: 1px solid black;
-  border-radius: 15px;
-  padding: 10px;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-
-.kartya img {
-  width: 200px;                /* a kép szélessége */
-  height: auto;                /* aránytartás */
-  border-radius: 15px;
-  border: 2px solid black;
-}
-
-.kartya_szoveg {
-  display: flex;
-  flex-direction: column;      /* H3 fent, P alatta */
-  justify-content: flex-start;
-}
-
-.kartya_szoveg h3 {
-  margin: 0 0 10px 0;          /* távolság a cím és szöveg között */
-}
-
-.kartya_szoveg p {
-  margin: 0;
-}
-.carousel-item img {
-    height: 40vh;
-    object-fit: cover;
-}
-.bemutatkozo_szoveg p  {
-    text-align: center;
-}
-.footer {
-  position: fixed;        /* FIX az oldal alján */
-  bottom: 0;              /* legalul */
-  left: 50%;              /* vízszintes közép */
-  transform: translateX(-50%);
-  width: 100%;            
-  background-color: #c5b6a359;
-  text-align: center;
-  padding: 10px 0;
-  border-top: 1px solid #ccc;
-  z-index: 1000;
-}
-.footer-adatok p {
-    display: inline;
-}
-.navbar-brand img {
-    width: 100px;
-    display: flex;
-    align-items: flex-end;
-
-}
-.profil {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  margin-right: 1.5rem;
-}
-
-
-.profil img {
-  width: 25px;
-  height: 25px;
-  pointer-events: auto; /* kell, hogy kattintható legyen */
-  z-index: 1000;   
-}
-
-.bemutatkozo_kep {
-  float: left;
-  width: 300px;
-  height: 418.64;
-  margin-left: 5%;
-  margin-right: 20px;
-  border-radius: 40px;
-  border: 2px black solid;
-}
-.bemutatkozo_kep2 {
-  float: left;
-  width: 300px;
-  margin-left: 5%;
-  margin-right: 20px;
-  border-radius: 40px;
-  border: 2px black solid;
-}
-.parent {
-display: grid;
-grid-template-columns: 1fr 1.4fr 1fr;
-grid-template-rows: 0.2fr 0.5fr 1fr;
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-}
-
-.div1 { grid-area: 1 / 1 / 4 / 2; }
-.div2 { grid-area: 1 / 3 / 4 / 4; }
-.div3 { grid-area: 2 / 2 / 3 / 3; 
-        align-items: center;
-        text-align: center;    
-}
-.szolgaltatasok {
-  max-width: 800px;
-  margin: 60px auto;
-  text-align: center;
-  line-height: 1.7;
-}
-
-.focim {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 40px; /* hely a főcím alatt */
-}
-
-.szolgaltatasok h3 {
-  margin-top: 30px;
-}
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-            background-color: #c5b6a3;
-            color: rgb(0, 0, 0);
-            /* border-bottom: 2px solid black; rgba(164, 164, 164, 0.149) */
-            /* margin-bottom: 3%; */
-        }
-        .nav_links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            color: rgb(0, 0, 0);
-            margin: 0 auto;
-        }
-        .nav_links li a {
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        .menu-toggle{
-            display: none;
-            cursor: pointer;
-        }
-        .menu-toggle .bar {
-            width: 30px;
-            height: 4px;
-            background-color: rgb(0, 0, 0);
-            margin: 4px 0;
-            border-radius: 2px;
-        }
-        @media screen and (max-width: 480px) {
-            .menu-toggle{
-                display: block;
-            }
-            .nav_links{
-                display: none;
-                flex-direction: column;
-               /*   position: absolute;
-                left: 0px;
-                top: 50px; 
-                background-color: grey; */
-                
-            }
-            .nav_links li {
-                text-align: center;
-            }
-            .nav_links.show {
-                display: flex;
-            }
-        }
-        .menu-bezar svg {
-            width: 35px;
-            height: 35px;
-        }
-
-        .menu-bezar {
-            display: none;
-        }
-        .menu-toggle.hide {
-            display: none;
-        }
-
-        .menu-bezar.show {
-            display: block;
-        }
-
-
-@media screen and (max-width: 767px) {
-  .col-md-4:first-child,
-  .col-md-4:last-child {
-      display: none;
-  }
-  .col-md-4:nth-child(2) {
-      text-align: center; /* vízszintesen középre */
-      margin: 0 auto;     /* középre tolás, ha kell */
-  }
-
-}
-@media screen and (max-width: 767px) {
-  .footer {
-    display: none;
-  }
-}
-
-
-@media screen and (max-width: 900px) {
-  .div2 {
-    display: none; 
-  }
-  .div3 {
-    text-align: center; 
-    margin: 0 auto;
-  }
-  .parent {
-    grid-template-columns: 1fr 2fr; /* marad bal kép + szöveg, szöveg kitölti a jobb helyet */
-  }
-}
-
-@media screen and (max-width: 511px) {
-  .div1 {
-    display: none; 
-  }
-  .parent {
-    grid-template-columns: 3fr; /* marad bal kép + szöveg, szöveg kitölti a jobb helyet */
-  }
-}
-@media (max-width: 768px) {
-  .kartyak {
-    grid-template-columns: 1fr;
-  }
-
-  .kartya:nth-child(7) {
-    grid-column: auto;
-    max-width: 100%;
-  }
-}
-    
